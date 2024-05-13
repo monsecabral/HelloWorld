@@ -20,7 +20,16 @@ function init(){
 };
 
 function onGreetUserBtnClicked(){
-    //alert my input.value
-    alert("Hello " + userInput.value + "!"); 
+
+    //input (what we know)
+    let userEnteredName = userInput.value;
+
+
+    //computation (what do we need to figure out)
+    let message = "Hello " + userEnteredName + "!";
+
+    //display the result
+  
+    alert(message); 
     // 
 };
