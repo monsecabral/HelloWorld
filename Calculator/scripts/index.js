@@ -14,7 +14,7 @@ const submitDivButton = document.getElementById("submitDivButton");
 
 // I want my element to display a message
 
-const answerFieldDisplay = document.getElementById("answerFieldDisplay");
+const answerField = document.getElementById("answerField");
 
 window.onload = init;
 
@@ -26,17 +26,58 @@ function init(){
 }
 
 function onAddButtonClicked(){
-
+    console.log("click");
     // get the known values from the HTML Elements, place them in variables.  Be sure to convert them to numbers.
-    let userEnteredNumber1 = number1Field.value;
-    let userEnteredNumber2 = number2Field.value;
-
+    let userEnteredNumber1 = Number(number1Field.value);
+    let userEnteredNumber2 = Number(number2Field.value);
+    console.log("userEnteredNumber1, " + userEnteredNumber1);
+    console.log("userEnteredNumber2, " + userEnteredNumber2);
 
     // compute the values that we do not already know.
     let sum = userEnteredNumber1 + userEnteredNumber2;
 
+    console.log(sum);
+
     // display our results.
+    answerField.value = sum;
 
-    let answerFieldDisplay = sum;
+}
 
+function onSubButtonClicked(){
+    console.log("click");
+
+    let userEnteredNumber1 = Number(number1Field.value);
+    let userEnteredNumber2 = Number(number2Field.value);
+
+    let sum = userEnteredNumber1 - userEnteredNumber2;
+
+    console.log(sum);
+
+    answerField.value = sum;
+}
+
+function onMulButtonClicked(){
+    console.log("click");
+
+    let userEnteredNumber1 = Number(number1Field.value);
+    let userEnteredNumber2 = Number(number2Field.value);
+
+    let sum = userEnteredNumber1 * userEnteredNumber2;
+
+    console.log(sum);
+
+    answerField.value = sum;   
+}
+
+function onDivButtonClicked(){
+    console.log("click");
+
+    let userEnteredNumber1 = Number(number1Field.value);
+    let userEnteredNumber2 = Number(number2Field.value);
+
+    let sum = userEnteredNumber1 / userEnteredNumber2;
+
+    console.log(sum);
+
+    answerField.value = sum;   
 }
